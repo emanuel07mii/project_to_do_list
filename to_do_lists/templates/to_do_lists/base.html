@@ -47,9 +47,11 @@
               </nav>
         </header>
 
-        {% block content %}
+        <div class="container">
+            {% block content %}
 
-        {% endblock content %}
+            {% endblock content %}
+        </div>
 
         <script href="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
