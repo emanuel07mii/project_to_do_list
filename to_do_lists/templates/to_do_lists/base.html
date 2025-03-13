@@ -25,19 +25,19 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
                       </li>
 
-                      {% if users.is_authenticated %}
+                      {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Alterar Senha</a>
+                            <a class="nav-link" href="{% url 'index' %}">Alterar Senha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sair</a>
+                            <a class="nav-link" href="{% url 'index' %}">Sair</a>
                         </li>
                       {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Registar</a>
+                            <a class="nav-link" href="{% url 'index' %}">Registar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Entrar</a>
+                            <a class="nav-link" href="{% url 'index' %}">Entrar</a>
                         </li>
                       {% endif %}
 

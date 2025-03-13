@@ -2,6 +2,26 @@
 
 {% block content %}
 
-To do List
+{% is user.is_authenticated %}
+
+<div class="row">
+    
+    <form method="post" class="shadow p-3 mt-3 col-12 col-md-4">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="id_tarefa" class="form-label">Tarefa</label>
+            {{ form.tarefa }}
+        </div>
+
+        <button type="submit" class="form-control btn btn-primary">Cadastrar</button>
+
+    </form>
+
+</div>
+
+{% else %}
+    <a href="#" class="text-center mt-3">Clique aqui para realizar seu cadastro</a>
+{% endif %}
 
 {% endblock content %}
