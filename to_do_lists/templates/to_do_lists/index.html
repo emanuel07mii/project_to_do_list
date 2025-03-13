@@ -2,10 +2,10 @@
 
 {% block content %}
 
-{% is user.is_authenticated %}
+{% if user.is_authenticated %}
 
 <div class="row">
-    
+
     <form method="post" class="shadow p-3 mt-3 col-12 col-md-4">
         {% csrf_token %}
 
@@ -17,6 +17,18 @@
         <button type="submit" class="form-control btn btn-primary">Cadastrar</button>
 
     </form>
+
+    <div>
+        <div>
+            Tarefas Concluídas:
+            {{ tarefas_concluidas }}
+        </div>
+
+        <div>
+            Tarefas não Concluidas:
+            {{ tarefas_nao_concluidas }}
+        </div>
+    </div>
 
 </div>
 
