@@ -55,14 +55,33 @@ def index(request):
     
     return response
 
-def concluir(request):
+def concluir(request, id):
+    response = redirect('index')
 
-    response = render(request, 'to_do_lists/index.html')
+    if request.user.is_authenticated:
+        tarefas_total = Tarefa.objects.filter(user=request.user)
+        
+        if tarefas_total is not None:
+            for tarefa in tarefas_total:
+                if tarefa.id == id:
+                    tarefa.concluido = True
+                    tarefa.save()
+        
+        response = redirect('index')
     
     return response
 
-def excluir(request):
+def excluir(request, id):
+    response = redirect('index')
 
-    response = render(request, 'to_do_lists/index.html')
+    if request.user.is_authenticated:
+        tarefas_total = Tarefa.objects.filter(user=request.user)
+        
+        if tarefas_total is not None:
+            for tarefa in tarefas_total:
+                if tarefa.id == id:
+                    tarefa.delete()
 
+        response = redirect('index')
+    
     return response

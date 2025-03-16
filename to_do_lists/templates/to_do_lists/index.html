@@ -44,8 +44,8 @@
                 {% for tarefa in tarefas_nao_concluidas %}
                     <div class="input-group mb-3 col-12" id="basic-addon1">
                         <span class="input-group-text col-8">{{ tarefa.tarefa }}</span>
-                        <a class="btn btn-primary col-2 btn_small" href="#">Concluir</a>
-                        <a class="btn btn-danger col-2 btn_small" href="#">Excluir</a>
+                        <a class="btn btn-primary col-2 btn_small" href="{% url 'concluir' id=tarefa.id %}">Concluir</a>
+                        <a class="btn btn-danger col-2 btn_small" href="{% url 'excluir' id=tarefa.id %}">Excluir</a>
                     </div>
                 {% endfor %}
             {% else %}
