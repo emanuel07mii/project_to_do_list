@@ -17,15 +17,13 @@
         {% csrf_token %}
 
         {% if form.errors %}
-            {% for filds,errors in form.errors.items %}
-
+            {% for field, errors in form.errors.items %}
                 {% for error in errors %}
-                    <span class="text-danger">*{{ error }}</span>
+                    <span class="text-danger">* {{ error }}</span><br>
                 {% endfor %}
-
             {% endfor %}
-
         {% endif %}
+
 
         <div class="mb-3">
             <label for="id_tarefa" class="form-label">Tarefa</label>

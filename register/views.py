@@ -1,13 +1,20 @@
 from django.shortcuts import render, redirect
+from .forms import MyUserCreationForm, MyPasswordChangeForm
 
-# Create your views here.
 def register(request):
     if request.user.is_authenticated:
-        response = redirect('index')
-    else:
-        response = render(request, 'register.html')
+        return redirect('index')
+
+    if request.method == 'POST':
+        form = MyUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('sucesso')
+        else:
+            return render(request, 'register.html', {'form': form})
     
-    return response
+    form = MyUserCreationForm()
+    return render(request, 'register.html', {'form': form})
 
 def sucesso(request):
     if request.user.is_authenticated:
