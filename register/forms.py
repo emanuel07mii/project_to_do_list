@@ -36,12 +36,12 @@ class MyPasswordChangeForm(PasswordChangeForm):
 
         })
 
-        self.fields['password1'].widget.attrs.update({
+        self.fields['new_password1'].widget.attrs.update({
             'id': 'id_change_password1',
             'class': 'form-control',
         })
 
-        self.fields['password2'].widget.attrs.update({
+        self.fields['new_password2'].widget.attrs.update({
             'id': 'id_change_password2',
             'class': 'form-control',
         })
