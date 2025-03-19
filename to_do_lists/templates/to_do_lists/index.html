@@ -70,9 +70,11 @@
 </div>
 
 {% else %}
-    <div class="container justify-content-center">
-        <a href="{% url 'register' %}" class="mt-5 text-center">Clique aqui para realizar seu cadastro</a>
-    </div>
+<div class="container justify-content-center">
+    <h4 class="mt-5 text-center">
+        <a href="{% url 'register' %}" class="mt-5">Clique aqui</a> para realizar seu cadastro
+    </h2>
+</div>
 {% endif %}
 
 {% endblock content %}
