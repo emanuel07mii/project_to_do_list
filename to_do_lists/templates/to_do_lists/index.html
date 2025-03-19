@@ -53,7 +53,7 @@
 
         <div class="p-3 mt-3 col-12">
             <h3>Tarefas Concluídas:</h2>
-                {% if tarefas_nao_concluidas %}
+                {% if tarefas_concluidas %}
                     {% for tarefa in tarefas_concluidas %}
                         <div class="mb-3 col-12 text-bg-info p-3">
                             <span class=" col-8">{{ tarefa }}</span>
@@ -70,7 +70,9 @@
 </div>
 
 {% else %}
-    <a href="{% url 'register' %}" class="text-center mt-3">Clique aqui para realizar seu cadastro</a>
+    <div class="container justify-content-center">
+        <a href="{% url 'register' %}" class="mt-5 text-center">Clique aqui para realizar seu cadastro</a>
+    </div>
 {% endif %}
 
 {% endblock content %}

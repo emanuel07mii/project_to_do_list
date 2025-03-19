@@ -40,39 +40,41 @@ def index(request):
                 new_tarefa = Tarefa.objects.create(user=user, tarefa=tarefa, concluido=concluido)
                 new_tarefa.save()
 
-                response = redirect('index')
+                return redirect('index')
             else:
                 context = {'form':form,
                             'tarefas_concluidas': tarefas_concluidas,
-                            'tarefas_nao_concluidas': tarefas_nao_concluidas}
+                            'tarefas_nao_concluidas': tarefas_nao_concluidas,
+                        }
                 response = render(request, 'to_do_lists/index.html', context)
+                return response
         else:
             form = TarefaForm()
             context = {'form':form,
                         'tarefas_concluidas': tarefas_concluidas,
-                        'tarefas_nao_concluidas': tarefas_nao_concluidas}
-            response = render(request, 'to_do_lists/index.html', context)
-    
-    return response
+                        'tarefas_nao_concluidas': tarefas_nao_concluidas,
+                    }
+            return render(request, 'to_do_lists/index.html', context)
+    else:
+        return response
 
 def concluir(request, id):
-    response = redirect('index')
 
     if request.user.is_authenticated:
         tarefas_total = Tarefa.objects.filter(user=request.user)
         
         if tarefas_total is not None:
+
             for tarefa in tarefas_total:
                 if tarefa.id == id:
                     tarefa.concluido = True
                     tarefa.save()
         
-        response = redirect('index')
-    
-    return response
+        return redirect('index')
+    else:
+        return redirect('index')
 
 def excluir(request, id):
-    response = redirect('index')
 
     if request.user.is_authenticated:
         tarefas_total = Tarefa.objects.filter(user=request.user)
@@ -82,6 +84,6 @@ def excluir(request, id):
                 if tarefa.id == id:
                     tarefa.delete()
 
-        response = redirect('index')
-    
-    return response
+        return redirect('index')
+    else:
+        return redirect('index')

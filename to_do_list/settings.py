@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'to_do_lists',
     'register',
+    'authenticated',
 ]
 
 MIDDLEWARE = [
