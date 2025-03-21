@@ -12,6 +12,7 @@
 /* Efeito de hover para as tarefas não concluídas */
 .text-bg-primaryv2:hover {
   transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+  color: #162229;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
@@ -34,6 +35,7 @@
 /* Efeito de hover para as tarefas concluídas */
 .text-bg-infov2:hover {
   transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+  color: #091609;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
@@ -53,7 +55,6 @@
   border-color: #4caf50; /* Cor da borda */
   border-radius: 25px; /* Bordas arredondadas */
   padding: 14px 20px; /* Tamanho adequado para o botão */
-  font-size: 4vw; /* Tamanho da fonte baseado na largura da tela */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
   font-size: 10px; /* Tamanho máximo da fonte */
 }
@@ -71,7 +72,6 @@
   border-color: #4caf50; /* Cor da borda */
   border-radius: 25px; /* Bordas arredondadas */
   padding: 10px 20px; /* Tamanho adequado para o botão */
-  font-size: 4vw; /* Tamanho da fonte baseado na largura da tela */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
   font-size: 10px; /* Tamanho máximo da fonte */
 }
@@ -89,7 +89,6 @@
   border-color: #e53935; /* Cor da borda */
   border-radius: 25px; /* Bordas arredondadas */
   padding: 10px 20px; /* Tamanho adequado para o botão */
-  font-size: 4vw; /* Tamanho da fonte baseado na largura da tela */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
   font-size: 10px; /* Tamanho máximo da fonte */
 }
@@ -107,7 +106,7 @@
   border-color:rgb(66, 66, 66); /* Cor da borda cinza clara */
   border-radius: 25px; /* Bordas arredondadas */
   padding: 10px 20px; /* Tamanho adequado para o botão */
-  font-size: 14px; /* Tamanho da fonte */
+  font-size: 10px; /* Tamanho da fonte */
   color: #424242; /* Cor do texto, um cinza mais escuro para contraste */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
 }
