@@ -55,14 +55,8 @@ python manage.py runserver
 5. Acesse:
 http://127.0.0.1:8000/
 
-## 📚 Referência
-Curso: Curso de Django (To-Do-List) [📺 Assista no YouTube](https://youtu.be/AdkudhWWMoM?si=XDj3B9FWnEj8Vqij)
-
-### 📌 Observações
-- Este projeto foi criado apenas com fins educacionais, como forma de praticar os conceitos do Django.
-Créditos ao [Jefferson Lobato](https://www.youtube.com/@JeffersonLobato) pelo excelente conteúdo.
-
 ## 👤 Controle de usuários
+
 - Página de registro de novos usuários
 
 - Sistema de login e logout
@@ -71,4 +65,23 @@ Créditos ao [Jefferson Lobato](https://www.youtube.com/@JeffersonLobato) pelo e
 
 - Proteção das tarefas por usuário: cada um vê apenas as suas
 
+## 📚 Referência
+
+Curso: Curso de Django (To-Do-List) [📺 Assista no YouTube](https://youtu.be/AdkudhWWMoM?si=XDj3B9FWnEj8Vqij)
+
+### 📌 Observações
+
+- Este projeto foi criado apenas com fins educacionais, como forma de praticar os conceitos do Django.
+Créditos ao [Jefferson Lobato](https://www.youtube.com/@JeffersonLobato) pelo excelente conteúdo.
+
 ## 📷 Capturas de tela
+
+- Tela Inicial (Sem login)
+
+- Tela de cadastro de Usuário
+
+- Tela de Log In
+
+- Tela Inicial (Logado)
+
+- Tela de Reset de Senha

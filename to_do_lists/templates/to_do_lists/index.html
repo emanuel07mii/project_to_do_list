@@ -18,11 +18,11 @@
         {% csrf_token %}
 
         {% if form.errors %}
-        {% for field, errors in form.errors.items %}
-        {% for error in errors %}
-        <span class="text-danger">* {{ error }}</span><br>
-        {% endfor %}
-        {% endfor %}
+            {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                <span class="text-danger">* {{ error }}</span><br>
+                {% endfor %}
+            {% endfor %}
         {% endif %}
 
 
@@ -39,30 +39,30 @@
         <div class="p-3 mt-3 col-12">
             <h3>Tarefas:</h3>
             {% if tarefas_nao_concluidas %}
-            {% for tarefa in tarefas_nao_concluidas %}
-            <div class="mb-3 col-12 text-bg-primaryv2 p-2 input-group">
-                <span class="col-8">{{ tarefa.tarefa }}</span>
-                <a class="btn btn-concluir col-2" href="{% url 'concluir' id=tarefa.id %}">Concluir</a>
-                <a class="btn btn-dangerv2 col-2" href="{% url 'excluir' id=tarefa.id %}">Excluir</a>
-            </div>
-            {% endfor %}
+                {% for tarefa in tarefas_nao_concluidas %}
+                <div class="mb-3 col-12 text-bg-primaryv2 p-2 input-group">
+                    <span class="col-8">{{ tarefa.tarefa }}</span>
+                    <a class="btn btn-concluir col-2" href="{% url 'concluir' id=tarefa.id %}">Concluir</a>
+                    <a class="btn btn-dangerv2 col-2" href="{% url 'excluir' id=tarefa.id %}">Excluir</a>
+                </div>
+                {% endfor %}
             {% else %}
-            <p>Não há tarefas cadastradas.</p>
+                <p>Não há tarefas cadastradas.</p>
             {% endif %}
         </div>
 
         <div class="p-3 mt-3 col-12">
             <h3>Tarefas Concluídas:</h3>
             {% if tarefas_concluidas %}
-            {% for tarefa in tarefas_concluidas %}
-            <div class="mb-3 col-12 text-bg-infov2 p-2 input-group">
-                <span class="col-8">{{ tarefa }}</span>
-                <a class="btn btn-archived col-2" href="#">Arquivar</a>
-                <a class="btn btn-dangerv2 col-2" href="#">Excluir</a>
-            </div>
-            {% endfor %}
+                {% for tarefa in tarefas_concluidas %}
+                <div class="mb-3 col-12 text-bg-infov2 p-2 input-group">
+                    <span class="col-8">{{ tarefa }}</span>
+                    <a class="btn btn-archived col-2" href="#">Arquivar</a>
+                    <a class="btn btn-dangerv2 col-2" href="#">Excluir</a>
+                </div>
+                {% endfor %}
             {% else %}
-            <p>Não há tarefas Concluídas.</p>
+                <p>Não há tarefas Concluídas.</p>
             {% endif %}
         </div>
     </div>
