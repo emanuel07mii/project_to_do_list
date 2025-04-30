@@ -77,19 +77,25 @@ Créditos ao [Jefferson Lobato](https://www.youtube.com/@JeffersonLobato) pelo e
 ## 📷 Capturas de tela
 
 - Tela Inicial (Sem login)
-![Home](https://drive.google.com/file/d/1z8g70dxhLVITWP4RoydQcrQJ1NR-Cf68/view?usp=sharing)
+---
+![Home](https://i.postimg.cc/PrrWt70n/inicial-deslogado.png)
 
 - Tela de cadastro de Usuário
-![Cadastro de Usuário](https://drive.google.com/file/d/1wd3JMp2AXPJ8uHO4TWfcD58gdDtKtleE/view?usp=drive_link)
+---
+![Cadastro de Usuário](https://i.postimg.cc/qqQ2schF/registar.png)
 
 - Tela de Log In
-![Log In](https://drive.google.com/file/d/1rw6leCvpjS677KPyblBBIlOtD3GedbJF/view?usp=sharing)
+---
+![Log In](https://i.postimg.cc/SKGGmzkD/login.png)
 
 - Tela Inicial (Logado)
-![Home Conectado](https://drive.google.com/file/d/1tZnVjBmzcJprT9fXilFRFCpdjfNncRQw/view?usp=sharing)
+---
+![Home Conectado](https://i.postimg.cc/BQYxtgGL/inicial.png)
 
 - Tela de tarefas arquivadas
-![Tarefas Arquivadas](https://drive.google.com/file/d/1GecOvOVOKS60jsISIOKZAVh6zVveFt8T/view?usp=sharing)
+---
+![Tarefas Arquivadas](https://i.postimg.cc/26RdrSN0/arquivadas.png)
 
 - Tela de Reset de Senha
-![Redefinir Senha](https://drive.google.com/file/d/1JvFTCxD-tdKObHSnpsOpd41kpm5cs4Aj/view?usp=sharing)
+---
+![Redefinir Senha](https://i.postimg.cc/fbXX2QSm/reset-senha.png)
