@@ -1,0 +1,39 @@
+/* Estilo das tarefas Arquivadas */
+.text-bg-secondaryv2 {
+    background-color: #949da1; /* Cinza pastel para tarefas arquivadas */
+    color: #333333; /* Cinza mais escuro para contraste */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transição suave para o hover */
+}
+  
+  /* Efeito de hover para as Arquivadas */
+.text-bg-secondaryv2:hover {
+    transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+    color: #162229;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+  
+/* Alinhamento do texto e botões para tarefas arquivadas */
+.text-bg-secondaryv2 span {
+    font-weight: bold;
+}
+
+/* Estilo do botão Excluir Tarefas Arquivadas */
+.btn-danger-archived {
+    background-color: #c62828; /* Vermelho para o botão Excluir */
+    border-color: #c62828; /* Cor da borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Tamanho adequado para o botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
+    font-size: 10px; /* Tamanho máximo da fonte */
+}
+
+/* Efeito de hover para o botão Excluir em Tarefas Arquivadas */
+.btn-danger-archived:hover {
+    background-color: #771818; /* Tom mais escuro de vermelho */
+    border-color: #771818; /* Cor da borda ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+}

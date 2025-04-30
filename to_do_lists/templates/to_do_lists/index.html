@@ -57,8 +57,8 @@
                 {% for tarefa in tarefas_concluidas %}
                 <div class="mb-3 col-12 text-bg-infov2 p-2 input-group">
                     <span class="col-8">{{ tarefa }}</span>
-                    <a class="btn btn-archived col-2" href="#">Arquivar</a>
-                    <a class="btn btn-dangerv2 col-2" href="#">Excluir</a>
+                    <a class="btn btn-archived col-2" href="{% url 'arquivar_tarefa' tarefa_id=tarefa.id %}">Arquivar</a>
+                    <a class="btn btn-dangerv2 col-2" href="{% url 'excluir' id=tarefa.id %}">Excluir</a>
                 </div>
                 {% endfor %}
             {% else %}

@@ -1,4 +1,4 @@
-# To-Do List ✅
+# 📘 Projeto Django - To-Do List ✅
 Este é um projeto simples de lista de tarefas desenvolvido com **Django**, criado com o objetivo de aprendizado. O projeto foi desenvolvido acompanhando o tutorial do Jefferson Lobato no YouTube.
 
 ## 🚀 Funcionalidades
@@ -19,7 +19,7 @@ Este é um projeto simples de lista de tarefas desenvolvido com **Django**, cria
 - Python 🐍
 - Django 🧩
 - HTML & CSS 🖌️
-- Bootstrap 5 (Sendo carregado pela página static) 🖌️
+- Bootstrap 5 (Sendo carregado pela pasta static) 🖌️
 - SQLite (banco de dados padrão do Django)
 
 ## ▶️ Como executar o projeto

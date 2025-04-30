@@ -27,10 +27,7 @@
                     <ul class="navbar-nav">
                       {% if user.is_authenticated %}
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Arquivados</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Lixeira</a>
+                          <a class="nav-link" href="{% url 'tarefas_arquivadas' %}">Arquivados</a>
                         </li>
                       {% endif %}
                     </ul>

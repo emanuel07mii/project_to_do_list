@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import TarefaForm
 from .models import Tarefa
 from django.http import HttpResponse
@@ -22,10 +22,11 @@ def index(request):
             tarefas_nao_concluidas = []
 
             for tarefa in tarefas_total:
-                if tarefa.concluido == True:
+                if tarefa.concluido == True and tarefa.arquivada == False:
                     tarefas_concluidas.append(tarefa)
                 else:
-                    tarefas_nao_concluidas.append(tarefa)
+                    if tarefa.arquivada == False:
+                        tarefas_nao_concluidas.append(tarefa)
         else:
             tarefas_concluidas = None
             tarefas_nao_concluidas = None
@@ -81,9 +82,23 @@ def excluir(request, id):
         
         if tarefas_total is not None:
             for tarefa in tarefas_total:
-                if tarefa.id == id:
+                if tarefa.id == id and tarefa.arquivada == True:
                     tarefa.delete()
-
+                    return redirect('tarefas_arquivadas')
+                elif tarefa.id == id:
+                    tarefa.delete()
         return redirect('index')
     else:
         return redirect('index')
+
+def arquivar_tarefa(request, tarefa_id):
+    if request.user.is_authenticated:
+        tarefa = get_object_or_404(Tarefa, id=tarefa_id)
+        if tarefa is not None:
+            tarefa.arquivada = True
+            tarefa.save()
+    return redirect('index')
+
+def tarefas_arquivadas(request):
+    tarefas = Tarefa.objects.filter(arquivada=True)
+    return render(request, 'to_do_lists/arquivadas.html', {'tarefas': tarefas})
