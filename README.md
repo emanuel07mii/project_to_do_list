@@ -77,11 +77,19 @@ Créditos ao [Jefferson Lobato](https://www.youtube.com/@JeffersonLobato) pelo e
 ## 📷 Capturas de tela
 
 - Tela Inicial (Sem login)
+![Home](https://drive.google.com/file/d/1z8g70dxhLVITWP4RoydQcrQJ1NR-Cf68/view?usp=sharing)
 
 - Tela de cadastro de Usuário
+![Cadastro de Usuário](https://drive.google.com/file/d/1wd3JMp2AXPJ8uHO4TWfcD58gdDtKtleE/view?usp=drive_link)
 
 - Tela de Log In
+![Log In](https://drive.google.com/file/d/1rw6leCvpjS677KPyblBBIlOtD3GedbJF/view?usp=sharing)
 
 - Tela Inicial (Logado)
+![Home Conectado](https://drive.google.com/file/d/1tZnVjBmzcJprT9fXilFRFCpdjfNncRQw/view?usp=sharing)
+
+- Tela de tarefas arquivadas
+![Tarefas Arquivadas](https://drive.google.com/file/d/1GecOvOVOKS60jsISIOKZAVh6zVveFt8T/view?usp=sharing)
 
 - Tela de Reset de Senha
+![Redefinir Senha](https://drive.google.com/file/d/1JvFTCxD-tdKObHSnpsOpd41kpm5cs4Aj/view?usp=sharing)
