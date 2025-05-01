@@ -61,7 +61,7 @@ http://127.0.0.1:8000/
 
 - Sistema de login e logout
 
-- Tela para alteração de senha
+- Alteração de senha
 
 - Proteção das tarefas por usuário: cada um vê apenas as suas
 
