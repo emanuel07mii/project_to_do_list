@@ -13,8 +13,8 @@
     {% empty %}
     <p>Não há tarefas arquivadas.</p>
     {% endfor %}
+    <a class="btn btn-emoji btn-back-archived" href="{% url 'index' %}"><i class="bi bi-arrow-left-circle-fill"></i> Voltar</a>
 </div>
-<a href="{% url 'index' %}">← Voltar</a>
 
 <link rel="stylesheet" href="{% static 'css/styles_archived.css' %}">
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">

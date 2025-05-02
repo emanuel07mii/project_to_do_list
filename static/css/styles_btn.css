@@ -29,3 +29,21 @@
 .btn-archived:hover {
     color: #084298;
 }
+
+.btn-back-archived{
+    font-weight: bold;
+    background-color:rgba(136, 135, 135, 0.75);
+    border-color:rgb(66, 66, 66);
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #424242;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-back-archived:hover {
+    /* color: #515151; */
+    background-color: #bdbdbd;
+    border-color: #9e9e9e;
+    transform: scale(1.05);
+}

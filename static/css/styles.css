@@ -56,7 +56,8 @@
   border-radius: 25px; /* Bordas arredondadas */
   padding: 14px 20px; /* Tamanho adequado para o botão */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
-  font-size: 10px; /* Tamanho máximo da fonte */
+  font-size: 14px; /* Tamanho máximo da fonte */
+  font-weight: bold;
 }
 
 /* Efeito de hover para o botão Cadastrar */
@@ -68,54 +69,54 @@
 
 /* Estilo do botão Concluir */
 .btn-concluir {
-  background-color: #4caf50; //Verde suave para o botão Concluir
-  border-color: #4caf50; //Cor da borda
-  border-radius: 25px; // Bordas arredondadas
-  padding: 10px 20px; //Tamanho adequado para o botão
-  transition: background-color 0.3s ease, transform 0.3s ease; //Efeito de transição
-  font-size: 10px; //Tamanho máximo da fonte
+  background-color: #4caf50;
+  border-color: #4caf50;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 10px;
 }
 
 /* Efeito de hover para o botão Concluir */
 .btn-concluir:hover {
-  background-color: #45a049; //Tom mais escuro de verde
-  border-color: #45a049; //Cor da borda ao passar o mouse
-  transform: scale(1.05); //Leve aumento de tamanho ao passar o mouse
+  background-color: #45a049;
+  border-color: #45a049;
+  transform: scale(1.05);
 }
 
 /* Estilo do botão Excluir */
 .btn-dangerv2 {
-  background-color: #e53935; //Vermelho para o botão Excluir
-  border-color: #e53935; //Cor da borda
-  border-radius: 25px; //Bordas arredondadas
-  padding: 10px 20px; //Tamanho adequado para o botão
-  transition: background-color 0.3s ease, transform 0.3s ease; //Efeito de transição
-  font-size: 10px; //Tamanho máximo da fonte
+  background-color: #e53935;
+  border-color: #e53935;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 10px;
 }
 
 /* Efeito de hover para o botão Excluir */
 .btn-dangerv2:hover {
-  background-color: #c62828; //Tom mais escuro de vermelho
-  border-color: #c62828; //Cor da borda ao passar o mouse
-  transform: scale(1.05); //Leve aumento de tamanho ao passar o mouse
+  background-color: #c62828;
+  border-color: #c62828;
+  transform: scale(1.05);
 }
 
 /* Estilo do botão Arquivar */
 .btn-archived {
-  background-color:rgba(136, 135, 135, 0.75); //Cinza suave, semelhante ao btn-secondary
-  border-color:rgb(66, 66, 66); //Cor da borda cinza clara
-  border-radius: 25px; //Bordas arredondadas
-  padding: 10px 20px; //Tamanho adequado para o botão
-  font-size: 10px; //Tamanho da fonte
-  color: #424242; //Cor do texto, um cinza mais escuro para contraste
-  transition: background-color 0.3s ease, transform 0.3s ease; //Efeito de transição
+  background-color:rgba(136, 135, 135, 0.75);
+  border-color:rgb(66, 66, 66);
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 10px;
+  color: #424242;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Efeito de hover para o botão Arquivar */
 .btn-archived:hover {
-  background-color: #bdbdbd; //Tom mais escuro de cinza
-  border-color: #9e9e9e; //Cor da borda ao passar o mouse
-  transform: scale(1.05); //Leve aumento de tamanho ao passar o mouse
+  background-color: #bdbdbd;
+  border-color: #9e9e9e;
+  transform: scale(1.05);
 }
 
 /* Alinhamento do texto para o botão Arquivar */
