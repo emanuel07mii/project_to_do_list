@@ -1,0 +1,31 @@
+/* Estilo base para botões com emoji */
+.btn-emoji {
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 4px 10px;
+    transition: transform 0.2s, color 0.2s;
+}
+  
+/* Adiciona destaque ao passar o mouse */
+.btn-emoji:hover {
+    transform: scale(1.2);
+}
+  
+/* Cores diferentes por ação, se quiser */
+.btn-concluir {
+    color: #198754; /* verde */
+}
+
+.btn-concluir:hover {
+    color: #146c43;
+}
+
+.btn-archived {
+    color: #0d6efd; /* azul */
+}
+
+.btn-archived:hover {
+    color: #084298;
+}

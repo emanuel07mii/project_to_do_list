@@ -2,18 +2,21 @@
 {% load static %}
 
 {% block content %}
-    <div class="p-3 mt-3 col-10">
-        <h3>Tarefas Arquivadas:</h3>
-        {% for tarefa in tarefas %}
-            <div class="mb-3 col-10 text-bg-secondaryv2 p-2 input-group">
-                <span class="col-10">{{ tarefa.tarefa }}</span>
-                <a class="btn btn-danger-archived col-2 ms-auto" href="{% url 'excluir' id=tarefa.id %}">Excluir</a>
-            </div>
-        {% empty %}
-            <p>Não há tarefas arquivadas.</p>
-        {% endfor %}
+<div class="p-3 mt-3 col-10">
+    <h3>Tarefas Arquivadas:</h3>
+    {% for tarefa in tarefas %}
+    <div class="mb-3 col-10 text-bg-secondaryv2 p-2 input-group">
+        <span class="col-10">{{ tarefa.tarefa }}</span>
+        <a class="btn btn-emoji btn-dangerv2 col-1 text-center" title="Excluir"
+            href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
     </div>
-    <a href="{% url 'index' %}">← Voltar</a>
+    {% empty %}
+    <p>Não há tarefas arquivadas.</p>
+    {% endfor %}
+</div>
+<a href="{% url 'index' %}">← Voltar</a>
 
-    <link rel="stylesheet" href="{% static 'css/styles_archived.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles_archived.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles_btn.css' %}">
 {% endblock %}
