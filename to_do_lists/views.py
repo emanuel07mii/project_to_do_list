@@ -100,5 +100,8 @@ def arquivar_tarefa(request, tarefa_id):
     return redirect('index')
 
 def tarefas_arquivadas(request):
-    tarefas = Tarefa.objects.filter(arquivada=True)
-    return render(request, 'to_do_lists/arquivadas.html', {'tarefas': tarefas})
+    if request.user.is_authenticated:
+        tarefas = Tarefa.objects.filter(user=request.user, arquivada=True)
+        return render(request, 'to_do_lists/arquivadas.html', {'tarefas': tarefas})
+    else:
+        return render(request, 'to_do_lists/index.html')

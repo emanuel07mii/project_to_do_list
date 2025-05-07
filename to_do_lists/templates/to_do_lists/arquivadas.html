@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% if user.is_authenticated %}
 <div class="p-3 mt-3 col-10">
     <h3>Tarefas Arquivadas:</h3>
     {% for tarefa in tarefas %}
@@ -13,10 +14,12 @@
     {% empty %}
     <p>Não há tarefas arquivadas.</p>
     {% endfor %}
-    <a class="btn btn-emoji btn-back-archived" href="{% url 'index' %}"><i class="bi bi-arrow-left-circle-fill"></i> Voltar</a>
+    <a class="btn btn-emoji btn-back-archived" href="{% url 'index' %}"><i class="bi bi-arrow-left-circle-fill"></i>
+        Voltar</a>
 </div>
 
 <link rel="stylesheet" href="{% static 'css/styles_archived.css' %}">
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <link rel="stylesheet" href="{% static 'css/styles_btn.css' %}">
+{% endif %}
 {% endblock %}
