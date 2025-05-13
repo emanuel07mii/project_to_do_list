@@ -40,13 +40,16 @@
             <h3>Tarefas:</h3>
             {% if tarefas_nao_concluidas %}
             {% for tarefa in tarefas_nao_concluidas %}
-            <div class="mb-3 col-12 text-bg-primaryv2 p-2 input-group">
-                <span class="col-9">{{ tarefa.tarefa }}</span>
-                <a class="btn btn-emoji btn-concluir col-1 text-center" title="Concluir"
+            <div class="card-body d-flex justify-content-between align-items-center mb-3 col-12 text-bg-primaryv2 p-2 input-group shadow-sm">
+                <div class="col-9">
+                    <h5 class="card-title mb-1">{{ tarefa.tarefa }}</h5>
+                </div>
+                <div>
+                    <a class="btn btn-outline-primary btn-sm" title="Concluir"
                     href="{% url 'concluir' id=tarefa.id %}"><i class="bi bi-check2-circle"></i></a>
-                <a class="btn btn-emoji btn-dangerv2 col-1 text-center" title="Excluir"
-                    href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
-
+                    <a class="btn btn-outline-danger btn-sm" title="Excluir"
+                        href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
+                </div>
             </div>
             {% endfor %}
             {% else %}
@@ -58,13 +61,17 @@
             <h3>Tarefas Concluídas:</h3>
             {% if tarefas_concluidas %}
             {% for tarefa in tarefas_concluidas %}
-            <div class="mb-3 col-12 text-bg-infov2 p-2 input-group">
-                <span class="col-9">{{ tarefa }}</span>
-                <a class="btn btn-emoji btn-archived col-1 text-center" title="Arquivar"
-                    href="{% url 'arquivar_tarefa' tarefa_id=tarefa.id %}">
-                    <i class="bi bi-archive-fill"></i></a>
-                <a class="btn btn-emoji btn-dangerv2 col-1 text-center" title="Excluir"
-                    href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
+            <div class="card-body d-flex justify-content-between align-items-center mb-3 col-12 text-bg-infov2 p-2 input-group">
+                <div class="col-9">
+                    <h5 class="card-title mb-1">{{ tarefa }}</h5>
+                </div>
+                <div>
+                    <a class="btn btn-outline-secondary btn-sm" title="Arquivar"
+                        href="{% url 'arquivar_tarefa' tarefa_id=tarefa.id %}">
+                        <i class="bi bi-archive-fill"></i></a>
+                    <a class="btn btn-outline-danger btn-sm" title="Excluir"
+                        href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
+                </div>
             </div>
             {% endfor %}
             {% else %}
