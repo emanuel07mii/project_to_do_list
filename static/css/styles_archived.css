@@ -37,3 +37,21 @@
     border-color: #771818; /* Cor da borda ao passar o mouse */
     transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
 }
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02); /* aumenta levemente */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-danger {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
