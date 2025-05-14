@@ -3,6 +3,7 @@ from .forms import TarefaForm
 from .models import Tarefa
 from django.http import HttpResponse
 from django.views.decorators.cache import never_cache
+from django.utils import timezone
 
 @never_cache
 def index(request):
@@ -69,6 +70,7 @@ def concluir(request, id):
             for tarefa in tarefas_total:
                 if tarefa.id == id:
                     tarefa.concluido = True
+                    tarefa.data_conclusao = timezone.now()
                     tarefa.save()
         
         return redirect('index')
@@ -96,6 +98,7 @@ def arquivar_tarefa(request, tarefa_id):
         tarefa = get_object_or_404(Tarefa, id=tarefa_id)
         if tarefa is not None:
             tarefa.arquivada = True
+            tarefa.data_arquivamento = timezone.now()
             tarefa.save()
     return redirect('index')
 
