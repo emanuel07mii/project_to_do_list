@@ -1,7 +1,7 @@
 /* Estilo das tarefas cadastradas (não concluídas) */
 .text-bg-primaryv2 {
-  background-color: #b3e5fc; /* Azul pastel para tarefas não concluídas */
-  color: #0288d1; /* Azul mais escuro para contraste */
+  background-color: #e3f4fc; /* Azul pastel para tarefas não concluídas */
+  color: #00334e; /* Azul mais escuro para contraste */
   border-radius: 8px; /* Bordas arredondadas */
   padding: 10px;
   margin-bottom: 10px;
@@ -23,8 +23,8 @@
 
 /* Tarefas concluídas */
 .text-bg-infov2 {
-  background-color: #c8e6c9; /* Verde pastel para tarefas concluídas */
-  color: #388e3c; /* Verde escuro para contraste */
+  background-color: #e8ffe9; /* Verde pastel para tarefas concluídas */
+  color: #0b1b0c; /* Verde escuro para contraste */
   border-radius: 8px; /* Bordas arredondadas */
   padding: 10px;
   margin-bottom: 10px;

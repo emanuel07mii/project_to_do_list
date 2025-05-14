@@ -41,12 +41,18 @@
             {% if tarefas_nao_concluidas %}
             {% for tarefa in tarefas_nao_concluidas %}
             <div class="card-body d-flex justify-content-between align-items-center mb-3 col-12 text-bg-primaryv2 p-2 input-group shadow-sm">
-                <div class="col-9">
+                <div id="view-mode-{{ tarefa.id }}" class="col-9 flex-grow-1">
                     <h5 class="card-title mb-1">{{ tarefa.tarefa }}</h5>
                 </div>
+                <form id="edit-form-{{ tarefa.id }}" class="d-none w-100 d-flex" method="POST" action="{% url 'editar_tarefa' tarefa.id %}">
+                    {% csrf_token %}
+                    <input type="text" name="tarefa" value="{{ tarefa.tarefa }}" class="form-control me-2" required>
+                    <button type="submit" class="btn btn-success btn-sm">Salvar</button>
+                </form>
                 <div>
                     <a class="btn btn-outline-primary btn-sm" title="Concluir"
                     href="{% url 'concluir' id=tarefa.id %}"><i class="bi bi-check2-circle"></i></a>
+                    <a class="btn btn-outline-dark btn-sm" onclick="'toggleEdit({{ tarefa.id }})'" title="Editar" href="{% url 'editar_tarefa' id=tarefa.id %}"><i class="bi bi-pencil-fill"></i></a>
                     <a class="btn btn-outline-danger btn-sm" title="Excluir"
                         href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
                 </div>

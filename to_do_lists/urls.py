@@ -7,4 +7,5 @@ urlpatterns = [
     path('excluir/<int:id>', views.excluir, name='excluir'),
     path('arquivar/<int:tarefa_id>/', views.arquivar_tarefa, name='arquivar_tarefa'),
     path('arquivados/', views.tarefas_arquivadas, name='tarefas_arquivadas'),
+    path('editar/<int:id>/', views.editar_tarefa, name='editar_tarefa'),
 ]

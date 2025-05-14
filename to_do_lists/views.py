@@ -108,3 +108,15 @@ def tarefas_arquivadas(request):
         return render(request, 'to_do_lists/arquivadas.html', {'tarefas': tarefas})
     else:
         return render(request, 'to_do_lists/index.html')
+
+def editar_tarefa(request, id):
+    if request.user.is_authenticated:
+
+        tarefa = get_object_or_404(Tarefa, id=id)
+
+        if request.method == 'POST':
+            novo_titulo = request.POST.get('tarefa', '').strip()
+            if novo_titulo:
+                tarefa.tarefa = novo_titulo
+                tarefa.save()
+        return redirect('index')

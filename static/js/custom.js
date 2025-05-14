@@ -14,3 +14,11 @@ if (currentHour < 12) {
 }
 
 document.getElementById("welcome-message").innerHTML = welcomeMessage;
+
+function toggleEdit(id) {
+    const viewMode = document.getElementById('view-mode-' + id);
+    const editForm = document.getElementById('edit-form-' + id);
+
+    viewMode.classList.add('d-none');
+    editForm.classList.remove('d-none');
+}
