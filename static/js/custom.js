@@ -26,3 +26,15 @@ function toggleEdit(id) {
         botoes.classList.add('d-none');
     }
 }
+
+function cancelEdit(id) {
+    const viewMode = document.getElementById('view-mode-' + id);
+    const editForm = document.getElementById('edit-form-' + id);
+    const botoes = document.getElementById('botoes-' + id);
+
+    viewMode.classList.remove('d-none');
+    editForm.classList.add('d-none');
+    if (botoes) {
+      botoes.classList.remove('d-none');
+    }
+}

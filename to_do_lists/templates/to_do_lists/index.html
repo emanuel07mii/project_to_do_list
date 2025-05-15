@@ -47,14 +47,17 @@
                 <form id="edit-form-{{ tarefa.id }}" class="d-none w-100 d-flex" method="POST" action="{% url 'editar_tarefa' tarefa.id %}">
                     {% csrf_token %}
                     <input type="text" name="tarefa" value="{{ tarefa.tarefa }}" class="form-control me-2" required>
-                    <button type="submit" class="btn btn-success btn-sm">Salvar</button>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-success btn-sm">Salvar</button>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="cancelEdit('{{ tarefa.id }}')">Cancelar</button>
+                    </div>
                 </form>
                 <div id="botoes-{{ tarefa.id }}" class="d-flex gap-2">
                     <a class="btn btn-outline-primary btn-sm" title="Concluir"
                     href="{% url 'concluir' id=tarefa.id %}"><i class="bi bi-check2-circle"></i></a>
                     <button class="btn btn-outline-dark btn-sm" onclick="toggleEdit('{{ tarefa.id }}')" title="Editar" href="{% url 'editar_tarefa' id=tarefa.id %}" type="button"><i class="bi bi-pencil-fill"></i></button>
-                    <a class="btn btn-outline-danger btn-sm" title="Excluir"
-                        href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
+                    <a class="btn btn-outline-secondary btn-sm" title="Arquivar" href="{% url 'arquivar_tarefa' tarefa_id=tarefa.id %}"><i class="bi bi-archive-fill"></i></a>
+                    <a class="btn btn-outline-danger btn-sm" title="Excluir" href="{% url 'excluir' id=tarefa.id %}"><i class="bi bi-trash3-fill"></i></a>
                 </div>
                 <div>
                     <p class="card-text"><strong>Criada em:</strong> {{ tarefa.data_criacao|date:"d/m/Y" }} às {{ tarefa.data_criacao|date:"H:i" }}</p>
