@@ -18,7 +18,11 @@ document.getElementById("welcome-message").innerHTML = welcomeMessage;
 function toggleEdit(id) {
     const viewMode = document.getElementById('view-mode-' + id);
     const editForm = document.getElementById('edit-form-' + id);
+    const botoes = document.getElementById('botoes-' + id);
 
     viewMode.classList.add('d-none');
     editForm.classList.remove('d-none');
+    if (botoes) {
+        botoes.classList.add('d-none');
+    }
 }

@@ -49,7 +49,7 @@
                     <input type="text" name="tarefa" value="{{ tarefa.tarefa }}" class="form-control me-2" required>
                     <button type="submit" class="btn btn-success btn-sm">Salvar</button>
                 </form>
-                <div>
+                <div id="botoes-{{ tarefa.id }}" class="d-flex gap-2">
                     <a class="btn btn-outline-primary btn-sm" title="Concluir"
                     href="{% url 'concluir' id=tarefa.id %}"><i class="bi bi-check2-circle"></i></a>
                     <button class="btn btn-outline-dark btn-sm" onclick="toggleEdit('{{ tarefa.id }}')" title="Editar" href="{% url 'editar_tarefa' id=tarefa.id %}" type="button"><i class="bi bi-pencil-fill"></i></button>
