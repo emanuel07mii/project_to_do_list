@@ -90,11 +90,11 @@ Créditos ao [Jefferson Lobato](https://www.youtube.com/@JeffersonLobato) pelo e
 
 - Tela Inicial (Logado)
 ---
-![Home Conectado](https://i.imgur.com/OneilSZ.png)
+![Home Conectado](https://i.imgur.com/bg9DLl7.png)
 
 - Tela de tarefas arquivadas
 ---
-![Tarefas Arquivadas](https://i.imgur.com/SAhGUDw.png)
+![Tarefas Arquivadas](https://i.imgur.com/Z7EEALK.png)
 
 - Tela de Reset de Senha
 ---
