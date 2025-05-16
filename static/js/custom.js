@@ -59,7 +59,7 @@ function salvarEdicao(event, id) {
   .then(data => {
     if (data.status === 'ok') {
       // Atualiza o texto na interface
-      document.getElementById('view-mode-' + id).innerText = data.titulo;
+      document.getElementById('titulo-texto-' + id).innerText = data.titulo;
       cancelEdit(id); // Volta para o modo de visualização
     } else {
       alert('Erro ao salvar: ' + data.mensagem);
