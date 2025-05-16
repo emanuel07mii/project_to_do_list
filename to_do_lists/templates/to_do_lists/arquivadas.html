@@ -13,12 +13,15 @@
                 <p class="text-muted small mb-0"><strong>Arquivada em:</strong> {{ tarefa.data_arquivamento|date:"d/m/Y H:i" }}</p>
                 <!-- depois mudar para data que foi arquivada -->
             </div>
-            <a class="btn btn-outline-danger btn-sm"
-                href="{% url 'excluir' id=tarefa.id %}"
-                onclick="return confirm('Tem certeza que deseja excluir esta tarefa permanentemente?')"
-                title="Excluir definitivamente">
-                <i class="bi bi-trash3-fill"></i>
-            </a>
+            <div>
+                <a class="btn btn-outline-danger btn-sm"
+                    href="{% url 'excluir' id=tarefa.id %}"
+                    onclick="return confirm('Tem certeza que deseja excluir esta tarefa permanentemente?')"
+                    title="Excluir definitivamente">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+                <a class="btn btn-outline-info btn-sm" title="Restaurar" href="#"><i class="bi bi-arrow-clockwise"></i></a>
+            </div>
         </div>
     </div>
     {% empty %}
