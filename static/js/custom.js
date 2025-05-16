@@ -37,6 +37,8 @@ function cancelEdit(id) {
   if (botoes) {
     botoes.classList.remove('d-none');
   }
+  const tituloOriginal = document.getElementById('view-mode-' + id).innerText;
+  document.getElementById('input-titulo-' + id).value = tituloOriginal;
 }
 
 function salvarEdicao(event, id) {
