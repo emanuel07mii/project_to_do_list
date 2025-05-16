@@ -8,4 +8,5 @@ urlpatterns = [
     path('arquivar/<int:tarefa_id>/', views.arquivar_tarefa, name='arquivar_tarefa'),
     path('arquivados/', views.tarefas_arquivadas, name='tarefas_arquivadas'),
     path('editar/<int:id>/', views.editar_tarefa, name='editar_tarefa'),
+    path('editar_ajax/<int:id>/', views.editar_tarefa_ajax, name='editar_ajax'),
 ]

@@ -44,9 +44,8 @@
                 <div id="view-mode-{{ tarefa.id }}" class="col-9 flex-grow-1">
                     <h5 class="card-title mb-1">{{ tarefa.tarefa }}</h5>
                 </div>
-                <form id="edit-form-{{ tarefa.id }}" class="d-none w-100 d-flex" method="POST" action="{% url 'editar_tarefa' tarefa.id %}">
-                    {% csrf_token %}
-                    <input type="text" name="tarefa" value="{{ tarefa.tarefa }}" class="form-control me-2" required>
+                <form id="edit-form-{{ tarefa.id }}" class="d-none w-100 d-flex gap-2" onsubmit="salvarEdicao(event, '{{ tarefa.id }}')">
+                    <input type="text" id="input-titulo-{{ tarefa.id }}" name="tarefa" value="{{ tarefa.tarefa }}" class="form-control form-control-sm me-2" required>
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-success btn-sm">Salvar</button>
                         <button type="button" class="btn btn-secondary btn-sm" onclick="cancelEdit('{{ tarefa.id }}')">Cancelar</button>

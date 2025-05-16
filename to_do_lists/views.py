@@ -4,6 +4,9 @@ from .models import Tarefa
 from django.http import HttpResponse
 from django.views.decorators.cache import never_cache
 from django.utils import timezone
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+import json
 
 @never_cache
 def index(request):
@@ -120,3 +123,17 @@ def editar_tarefa(request, id):
                 tarefa.tarefa = novo_titulo
                 tarefa.save()
         return redirect('index')
+
+@csrf_exempt
+def editar_tarefa_ajax(request, id):
+    if request.method == 'POST':
+        try:
+            dados = json.loads(request.body)
+            novo_titulo = dados.get('tarefa')
+            tarefa = Tarefa.objects.get(id=id)
+            tarefa.tarefa = novo_titulo
+            tarefa.save()
+            return JsonResponse({'status': 'ok', 'titulo': tarefa.tarefa})
+        except Exception as e:
+            return JsonResponse({'status': 'erro', 'mensagem': str(e)})
+    return JsonResponse({'status': 'metodo_nao_permitido'})
