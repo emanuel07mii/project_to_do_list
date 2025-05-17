@@ -137,3 +137,18 @@ def editar_tarefa_ajax(request, id):
         except Exception as e:
             return JsonResponse({'status': 'erro', 'mensagem': str(e)})
     return JsonResponse({'status': 'metodo_nao_permitido'})
+
+def restaurar_tarefa(request, id):
+    if request.user.is_authenticated:
+        tarefa = get_object_or_404(Tarefa, id=id)
+        if tarefa is not None:
+            if tarefa.arquivada:
+                tarefa.arquivada = False
+                tarefa.save()
+                return redirect('tarefas_arquivadas')
+            else:
+                tarefa.concluido = False
+                tarefa.arquivada = False
+                print('chegou aqui')
+                tarefa.save()
+    return redirect('index')
